@@ -1,0 +1,39 @@
+.container-xxl
+{
+  top: 1px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  
+
+  position: relative;
+  text-align: left;
+  color: white;
+  font-family: "Open Sans SemiBold", serif;
+  font-size: 20px;
+  font-weight:bold;
+} 
+
+#ad-title
+{
+  top: 25%;
+  font-size: 40px;
+  text-shadow: -1px 1px 2px #000,1px 1px 2px #000;
+}
+
+#ad-content
+{
+  top : 38.5%;
+  text-shadow: -1px 1px 2px #000,1px 1px 2px #000;
+}
+
+#joinus {
+  top : 55%;
+
+  
+}
+
+.top-left {
+  position: absolute;
+  left: 10%;
+}

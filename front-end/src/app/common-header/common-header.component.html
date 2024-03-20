@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  <h2 class="text" routerLink=''>Learn-EndlessꝎ</h2>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedConent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <div class="btn-group dropright">
+          <a [routerLink]="['courses/all-courses']" [queryParams] = "{'search' : 'all'}" id="explore-button" type="button" class="btn btn-secondary dropdown-toggle"> Explore </a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <form class="form-inline my-2 my-lg-0">
+          <input [(ngModel)]="search_input" (keyup.enter)="doSearch(search_input)" id = "search-bar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search_input">
+          <button id="search-button" class="form-control mr-sm-2" type="submit" (click)="doSearch(search_input)"><i class=" fa fa-search"></i></button>
+        </form>
+      </li>
+    </ul>
+    <div [hidden]="headerService.isLoggedIn==true" class="nav-item">
+      <a class="effect" [routerLink]="['user','login']">Login</a> &nbsp;&nbsp;
+    </div>
+    <div [hidden]="headerService.isLoggedIn==true" class="nav-item">
+      <a class="effect" [routerLink]="['user','sign-up']">Signup</a>
+    </div>
+    <app-header-profile [hidden]="headerService.isLoggedIn==false"></app-header-profile>
+  </div>
+</nav>
